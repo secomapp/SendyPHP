@@ -106,6 +106,35 @@ class SendyPHP
         }
     }
 
+    public function delete($email)
+    {
+        $type = 'api/subscribers/delete.php';
+
+        //Send the unsubscribe
+        $result = strval($this->buildAndSend($type, array(
+            'email' => $email,
+            'api_key' => $this->api_key,
+            'list_id' => $this->list_id
+        ));
+
+        //Handle results
+        switch ($result) {
+            case '1':
+                return array(
+                    'status' => true,
+                    'message' => 'Deleted'
+                    );
+                break;
+            
+            default:
+                return array(
+                    'status' => false,
+                    'message' => $result
+                    );
+                break;
+        }
+    }
+    
     public function substatus($email)
     {
         $type = 'api/subscribers/subscription-status.php';
