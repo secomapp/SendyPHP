@@ -13,7 +13,7 @@ A PHP class built to interface with the Sendy API ([http://sendy.co](http://send
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `jacobbennett/sendyphp`.
 
 	"require": {
-		"jacobbennett/sendyphp": "1.3.*"
+		"secomapp/sendyphp": "1.3.*"
 	}
 
 Next, update Composer from the Terminal:
@@ -90,6 +90,13 @@ Unsubscribes the provided e-mail address (if it exists) from the current list.
 ```php
 	$results = $sendy->unsubscribe('test@testing.com');
 ```
+## delete($email)
+
+Delete email address from the current list.
+```php
+	$results = $sendy->delete('test@testing.com');
+```
+__Note:__ refer to the code or see http://sendy.co/api for the types of return messages you can expect.
 
 ## substatus($email)
 
