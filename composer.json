@@ -1,5 +1,5 @@
 {
-    "name": "jacobbennett/sendyphp",
+    "name": "secomapp/sendyphp",
     "description": "A PHP Library for interfacing with the Sendy newsletter system (http://sendy.co)",
     "keywords": ["sendy", "newsletter"],
     "license": "MIT",
