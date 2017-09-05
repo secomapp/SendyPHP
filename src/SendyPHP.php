@@ -115,7 +115,7 @@ class SendyPHP
             'email' => $email,
             'api_key' => $this->api_key,
             'list_id' => $this->list_id
-        ));
+        )));
 
         //Handle results
         switch ($result) {
